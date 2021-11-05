@@ -19,4 +19,15 @@ func TryOut(player Player) {
 func main() {
 	TryOut(gadget.TapeRecorder{})
 	TryOut(gadget.TapePlayer{})
+
+	player := gadget.TapePlayer{}
+	mixtape :=[]string{"jessie's Girl","whip"}
+	playList(player,mixtape)
+}
+
+func playList(device gadget.TapePlayer,songs []string)  {
+	for _,song := range  songs{
+		device.Play(song)
+	}
+	device.Stop()
 }
