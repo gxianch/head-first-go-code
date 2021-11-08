@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func sayHi() {
-	fmt.Println("Hi")
-}
+//func sayHi() {
+//	fmt.Println("Hi")
+//}
 
 func doMath(passedFunction func(int, int) float64) {
 	result := passedFunction(10, 2)

@@ -28,8 +28,10 @@ func responseSize(url string, channel chan Page) {
 
 func main() {
 	pages := make(chan Page)
-	urls := []string{"https://example.com/",
-		"https://golang.org/", "https://golang.org/doc"}
+	//urls := []string{"https://example.com/",
+	//	"https://golang.org/", "https://golang.org/doc"}
+	urls := []string{"https://www.baidu.com/",
+		"https://www.topgoer.cn/docs/golang-design-pattern/golang-design-pattern-1cbgha2ltg796", "https://books.halfrost.com/leetcode/"}
 	for _, url := range urls {
 		go responseSize(url, pages)
 	}

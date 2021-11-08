@@ -26,7 +26,7 @@ func check(err error) {
 // with a count of all signatures.
 func viewHandler(writer http.ResponseWriter, request *http.Request) {
 	signatures := getStrings("signatures.txt")
-	html, err := template.ParseFiles("view.html")
+	html, err := template.ParseFiles("ch16/view.html")
 	check(err)
 	guestbook := Guestbook{
 		SignatureCount: len(signatures),
@@ -38,7 +38,7 @@ func viewHandler(writer http.ResponseWriter, request *http.Request) {
 
 // newHandler displays a form to enter a signature.
 func newHandler(writer http.ResponseWriter, request *http.Request) {
-	html, err := template.ParseFiles("new.html")
+	html, err := template.ParseFiles("ch16/new.html")
 	check(err)
 	err = html.Execute(writer, nil)
 	check(err)
